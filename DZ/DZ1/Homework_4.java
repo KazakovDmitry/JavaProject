@@ -6,7 +6,6 @@ package JavaProject.DZ.DZ1;
  Предложить хотя бы одно решение или сообщить, что его нет.
 */
 
-// import java.util.Scanner;
 
 public class Homework_4 {
     public static void main(String[] args) {
@@ -45,7 +44,6 @@ public class Homework_4 {
                             for (int m = 0; m < 10; m++) {
                                 if (f == 63) ft = m;
                                 else ft = f;
-                                // res = a * 10 + b + c * 10 + d;
                                 
                                 if (at * 10 + bt + ct * 10 + dt == et * 10 + ft) {
                                     while(!flag){
