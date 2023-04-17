@@ -2,7 +2,7 @@
 3. Реализовать простой калькулятор
 */
 
-package Lesson_1;
+package JavaProject.DZ.DZ1;
 import java.util.Scanner;
 
 public class Homework_3 {
@@ -14,6 +14,7 @@ public class Homework_3 {
         String operator = iScanner.next();
         System.out.printf("Введите второе число: ");
         int b = iScanner.nextInt();
+        iScanner.close();
 
         switch (operator) {
             case "+":

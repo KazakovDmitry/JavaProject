@@ -14,5 +14,6 @@ public class HW1_TreugolnoeChislo {
             sum = sum + i;
         }
         System.out.println(sum);
+        iScanner.close();
     }
 }
