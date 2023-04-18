@@ -30,7 +30,12 @@ public class Homework_3 {
                 break;
 
             case "/":
-                System.out.printf("%d / %d = %d\n", a, b, a/b);
+                if (b == 0) {
+                    System.out.println("На ноль делить нельзя!");
+                }
+                else {
+                    System.out.printf("%d / %d = %d\n", a, b, a/b);
+                }
                 break;
         
        } 
