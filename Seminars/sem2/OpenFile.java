@@ -1,8 +1,10 @@
+package JavaProject.Seminars.sem2;
+
 import java.io.FileReader;
 import java.io.IOException;
 
 public class OpenFile {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileReader reader = null;
         try {
             reader = new FileReader ("file.txt");
@@ -12,15 +14,18 @@ public class OpenFile {
         catch (IOException ex) {
             System.out.println("Была проблема!");
         }
-        catch (IOException ex) {
-            System.out.println("Была проблема!");
-        }
+
         catch (Exception ex) {
             System.out.println("Была проблема!");
         }
         finally {
-            if (reader != null)
-                reader.close ();
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
         }
     }
 }
