@@ -9,7 +9,5 @@ public class NumberComparator implements Comparator<Integer> {
         if (o1 < o2) return 1;
         else if (o1 == o2) return 0;
         else return -1;
-
-
     }
 }

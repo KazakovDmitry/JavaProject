@@ -6,10 +6,6 @@ package JavaProject.Seminars.sem3;
 
 import java.util.ArrayList;
 
-import static java.lang.Character.TYPE;
-import static java.lang.Character.isDigit;
-
-
 public class Task3 {
     public static void main(String[] args) {
         ArrayList list = new ArrayList<String>();
