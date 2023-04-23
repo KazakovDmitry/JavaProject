@@ -2,16 +2,14 @@
 3. Реализовать простой калькулятор
 */
 
-package JavaProject.DZ.DZ1;
-import JavaProject.DZ.DZ2.Task2;
+package JavaProject.DZ.DZ2;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
-public class Homework_3 {
+public class Copy_Homework_3 {
     public static void main(String[] args) throws IOException {
         Scanner iScanner = new Scanner(System.in);
 		System.out.printf("Введите первое число: ");
@@ -25,19 +23,20 @@ public class Homework_3 {
         Logger logger = Logger.getLogger(Task2.class.getName());
         FileHandler info = new FileHandler("log.txt");
         logger.addHandler(info);
+        int res = 0;
 
 
         switch (operator) {
             case "+":
-                System.out.printf("%d + %d = %d\n", a, b, a+b);
+                res = a+b;
                 break;
 
             case "-":
-                System.out.printf("%d - %d = %d\n", a, b, a-b);
+                res = a-b;
                 break;
 
             case "*":
-                System.out.printf("%d * %d = %d\n", a, b, a*b);
+                res = a*b;
                 break;
 
             case "/":
@@ -46,11 +45,13 @@ public class Homework_3 {
                     logger.info("Выполнено с ошибкой");
                 }
                 else {
-                    System.out.printf("%d / %d = %d\n", a, b, a/b);
+                    res = a/b;
                 }
                 break;
 
        }
-       logger.info("Задание выполнено");
+
+       System.out.printf("%d %s %d = %d\n", a, operator, b, res);
+       logger.info(String.format("%d %s %d = %d\n", a, operator, b, res));
     }
 }
