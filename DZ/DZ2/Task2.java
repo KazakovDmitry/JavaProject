@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 import java.util.stream.IntStream;
 
 public class Task2 {
@@ -20,6 +21,7 @@ public class Task2 {
         int max;
         Logger logger = Logger.getLogger(Task2.class.getName());
         FileHandler info = new FileHandler("log.txt");
+        info.setFormatter(new SimpleFormatter());
         logger.addHandler(info);
         while (!isSorted) {
             isSorted = true;

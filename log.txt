@@ -1,17 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE log SYSTEM "logger.dtd">
-<log>
-<record>
-  <date>2023-04-23T10:15:11.852695300Z</date>
-  <millis>1682244911852</millis>
-  <nanos>695300</nanos>
-  <sequence>0</sequence>
-  <logger>JavaProject.DZ.DZ2.Task2</logger>
-  <level>INFO</level>
-  <class>JavaProject.DZ.DZ2.Copy_Homework_3</class>
-  <method>main</method>
-  <thread>1</thread>
-  <message>4 / 3 = 1
-</message>
-</record>
-</log>
+апр. 25, 2023 10:24:40 PM JavaProject.DZ.DZ2.Task2 main
+INFO: [8, 7, 12, 12, 13, 33, 34]
+апр. 25, 2023 10:24:40 PM JavaProject.DZ.DZ2.Task2 main
+INFO: [7, 8, 12, 12, 13, 33, 34]
+апр. 25, 2023 10:24:40 PM JavaProject.DZ.DZ2.Task2 main
+INFO: [7, 8, 12, 12, 13, 33, 34]
