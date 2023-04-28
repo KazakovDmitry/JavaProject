@@ -1,6 +1,6 @@
 // Пусть дан произвольный список целых чисел. Удалить из него чётные числа.
 
-package DZ.DZ3;
+package JavaProject.DZ.DZ3;
 
 import java.util.ArrayList;
 import java.util.Arrays;

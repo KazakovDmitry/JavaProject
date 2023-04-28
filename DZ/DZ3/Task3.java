@@ -1,7 +1,7 @@
 // Задан целочисленный список ArrayList. 
 // Найти минимальное, максимальное и среднее арифметичское этого списка.
 
-package DZ.DZ3;
+package JavaProject.DZ.DZ3;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,6 +1,6 @@
 // Реализовать алгоритм сортировки слиянием.
 
-package DZ.DZ3;
+package JavaProject.DZ.DZ3;
 
 import java.util.Arrays;
 

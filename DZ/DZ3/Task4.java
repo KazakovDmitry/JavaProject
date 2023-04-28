@@ -5,7 +5,7 @@
 // Симметрическая разность:
 // A ^ B = числа из первой коллекции, которых нет во второй, А ТАКЖЕ числа из второй, которых нет в первой
 
-package DZ.DZ3;
+package JavaProject.DZ.DZ3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
