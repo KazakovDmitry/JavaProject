@@ -40,7 +40,15 @@ public class Task1 {
             else {
                 code.put(s.charAt(i), t.charAt(i));
             }
+            if (code.containsValue(t.charAt(i))) {
+                for (Map.Entry<Character, Character> pair : code.entrySet()) {
+                    if (t.charAt(i) == pair.getValue())
+                        if (pair.getKey() != s.charAt(i))
+                            return false;
+                }
+            }
         }
+
         return true;
 
     }
