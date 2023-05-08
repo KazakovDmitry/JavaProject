@@ -7,24 +7,27 @@ import java.util.*;
 
 
 public class Task1 {
+    static Map<String, List<Integer>> phonebook = new HashMap<>();
+    private static void addPhonebook(String s, Integer i){
+        List<Integer> tempArr = phonebook.get(s);
+        if (tempArr == null) tempArr = new ArrayList<>();
+        tempArr.add(i);
+        phonebook.put(s, tempArr);
+    }
+
+    private static void addPhonebook(String s, List<Integer> i){
+        List<Integer> tempArr = phonebook.get(s);
+        if (tempArr == null) tempArr = new ArrayList<>();
+        tempArr.addAll(i);
+        phonebook.put(s, tempArr);
+    }
     public static void main(String[] args) {
-        Map<String, List<Integer>> phonebook = new HashMap<>();
-
-        phonebook.put("Иванов", Arrays.asList(123, 89871234));
-        phonebook.put("Петров", Arrays.asList(456));
-        phonebook.put("Сидоров", Arrays.asList(789, 8917789));
-        phonebook.putIfAbsent("Котятина", Arrays.asList(456));
-        phonebook.putIfAbsent("Сидоров", Arrays.asList(369, 8917369));
-//        phonebook.put("Иванов", phonebook.get("Иванов").add(Arrays.asList(258)));
-        List<Integer> test = new ArrayList<>();
-        for (Map.Entry<String, List<Integer>> pair : phonebook.entrySet()) {
-            if(pair.getKey().equals("Иванов")) pair.getValue().add(258);
-
-        }
-//        test.add(phonebook.get("Иванов"));
-        test.add(258);
-        System.out.println(test);
-        System.out.println(test.getClass());
+        addPhonebook("Иванов", Arrays.asList(123, 456));
+        addPhonebook("Иванов", 789);
+        addPhonebook("Петров", 456);
+        addPhonebook("Котятина", 456);
+        addPhonebook("Сидоров", Arrays.asList(123, 456, 789));
+        addPhonebook("Сидоров", 917);
 
         System.out.println(phonebook);
     }
