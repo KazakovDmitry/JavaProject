@@ -1,3 +1,4 @@
+package JavaProject.Seminars.sem2;
 
 class Point {
 	int x, y;   // поля класса

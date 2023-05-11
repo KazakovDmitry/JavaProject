@@ -1,4 +1,4 @@
-package Lesson_02;
+package JavaProject.Lections.Lesson_02;
 import java.io.*;
 
 public class Ex003_tryDemo {
