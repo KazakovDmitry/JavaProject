@@ -9,6 +9,7 @@ import java.util.Map;
 public class dop6_koni {
 
     public static void main(String[] args) {
+        long timeStart = System.nanoTime();
         int n = 5;
         int[][] arr = new int[n][n];
 
@@ -17,8 +18,8 @@ public class dop6_koni {
         }
         System.out.println();
 
-        int x = 0; // координата по горизонтали
-        int y = 0; // координата по вертикали
+        int x = 0; // координата по вертикали
+        int y = 0; // координата по горизонтали
         int move = 1; //номер шага
         int start = 1;
         int maxMove = 1;
@@ -29,7 +30,7 @@ public class dop6_koni {
 
         Map <Integer, String> journalMove = new HashMap<>();
         journalMove.put(move, String.format("%d,%d", x, y));
-        System.out.println(journalMove);
+//        System.out.println(journalMove);
 
         while (move < n*n) {
             if(move == 0) {
@@ -39,17 +40,17 @@ public class dop6_koni {
             }
             int i = start;
             while(i <= 8) {  // 8 - варианты хода конём
-                if(horse_move(x, y, arr, move, journalMove, i).containsKey(move+1) != false) {
+                if(horse_move(x, y, arr, move, journalMove, i).containsKey(move+1)) {
                     horse_move(x, y, arr, move, journalMove, i);
-                    System.out.println();
-                    System.out.println(journalMove);
+//                    System.out.println();
+//                    System.out.println(journalMove);
                     break;
                 }
                 i++;
             }
             if(journalMove.containsKey(move+1)){
                 move++;
-                if(maxMove < move) maxMove = move;
+//                if(maxMove < move) maxMove = move;
                 coordinats = journalMove.get(move).split(",");
                 x = Integer.parseInt(coordinats[0]);
                 y = Integer.parseInt(coordinats[1]);
@@ -60,13 +61,13 @@ public class dop6_koni {
                 arr[x][y] = 0;
                 journalMove.remove(move);
                 coordinats = journalMove.get(--move).split(",");                
-                System.out.println(journalMove);
-                System.out.println(Arrays.toString(coordinats));
+//                System.out.println(journalMove);
+//                System.out.println(Arrays.toString(coordinats));
                 x = Integer.parseInt(coordinats[0]);
                 y = Integer.parseInt(coordinats[1]);
                 start = Integer.parseInt(coordinats[2]) + 1;
-                System.out.printf("start=%d", start);
-                System.out.println();
+//                System.out.printf("start=%d", start);
+//                System.out.println();
 
                 while (start == 9) {
                     arr[x][y] = 0;
@@ -87,6 +88,8 @@ public class dop6_koni {
             }
             System.out.println("]");
         }
+        long timeFinish = System.nanoTime();
+        System.out.println(timeFinish - timeStart);
     }
 
     private static Map<Integer, String> horse_move(int x, int y, int[][] arr, int move, Map<Integer, String> journalMove, int variant) {
@@ -125,17 +128,17 @@ public class dop6_koni {
                 break;
             }
                
-        System.out.printf("x=%d, y=%d, move=%d, variant=%d", x, y, move, variant);
-        System.out.println();
+//        System.out.printf("x=%d, y=%d, move=%d, variant=%d", x, y, move, variant);
+//        System.out.println();
         journalMove.put(move, String.format("%d,%d,%d", x, y, variant));
 
-        for (int[] is : arr) {
-            System.out.print("[");
-            for (int i : is) {
-                System.out.printf("%3d ", i);               
-            }
-            System.out.println("]");
-        }
+//        for (int[] is : arr) {
+//            System.out.print("[");
+//            for (int i : is) {
+//                System.out.printf("%3d ", i);
+//            }
+//            System.out.println("]");
+//        }
 
         return journalMove;    
     }
