@@ -137,7 +137,7 @@ public class dop6_koni_minMoves {
     private static ArrayList<Integer> nextMove(ArrayList<Integer> knightOptions, int[][] board, int count) {
         ArrayList<Integer> minMoves = new ArrayList<>();
         for (int i = 0; i < knightOptions.size(); i += 2) {
-            minMoves.add(countMoves(count, board, knightOptions.get(i), knightOptions.get(i + 1)));
+//            minMoves.add(countMoves(count, board, knightOptions.get(i), knightOptions.get(i + 1)));
         }
         int min = minMoves.indexOf(Collections.min(minMoves));
         int x = knightOptions.get(min * 2);
