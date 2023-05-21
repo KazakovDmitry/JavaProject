@@ -9,9 +9,11 @@ package JavaProject.Seminars.sem6;
 public class Task02_cat {
     public static void main(String[] args) {
         VetCat cat = new VetCat("Вася", "Мэй-Кун", null, null, null, null, 'M');
+        VetCat cat2 = new VetCat("Мурзик", "дворянин", "grey", null, null, null, 'M');
 
         cat.setName("Барсик");
         System.out.println(cat.getName());
         System.out.println(cat);
+        System.out.println(cat2);
     }
 }

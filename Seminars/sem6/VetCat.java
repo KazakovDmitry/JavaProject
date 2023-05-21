@@ -9,6 +9,7 @@ package JavaProject.Seminars.sem6;/*
 import java.time.LocalDate;
 import java.util.Date;
 
+//поля или названия параметров
 public class VetCat {
     private String name;
     private String bread;
@@ -19,7 +20,7 @@ public class VetCat {
     //private List<Diagonsis> история болезни
     private char sex; // M, F
 
-    // гет и сет-методы
+    //конструктор
 
     public VetCat(String name, String bread, String color, String ownerName,
                   LocalDate dateOfBirth, String phone, char sex) {
@@ -32,6 +33,7 @@ public class VetCat {
         this.sex = sex;
     }
 
+    // гет и сет-методы
     public String getName() {
         return name;
     }
